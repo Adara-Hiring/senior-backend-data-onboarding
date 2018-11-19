@@ -12,39 +12,26 @@ basePath: /api/v1.0/
 
 # Paths supported by the server application
 paths:
-  /{dpid}:
+  /score/{cookie_id}:
     get:
-      operationId: api.get.get_by_dpid
+      operationId: api.score.get.get_score_by_cookie_id
       tags:
-        - TVS
-      summary: Get a list of the cookies and TVS scores
-      description: Get a list of the TVS scores tied to cookies for a particular DPID
+        - Intelligence
+      summary: Get a cookie's TVS score
+      description: Get a tvs score for a particular cookie_id
       parameters:
-        - name: dpid
+        - name: cookie_id
           in: path
           type: integer
-          description: Data provider ID to filter the TVS scores
+          description: the cookie ID
           required: True
-        - name: length
-          in: query
-          type: integer
-          description: Number of scores to return
-          required: false
-        - name: offset
-          in: query
-          type: integer
-          description: Offset from beginning of list where to start in the scores
-          required: false
       responses:
         200:
           description: Successfully returned list of intel scores
           schema:
-            type: array
-            items:
-              properties:
-                cookie_id:
-                  type: integer
-                score:
-                  type: number
-                timestamp:
-                  type: string
+            type: object
+            properties:
+              cookie_id:
+                type: integer
+              score:
+                type: number

@@ -1,6 +1,4 @@
 import connexion
-import unittest
-import argparse
 import os
 
 swagger_path = './swagger/'
