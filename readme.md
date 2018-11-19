@@ -19,10 +19,12 @@ This test is meant to evaluate 4 skills:
 ## Setup
 1. Create a virtual environment using Python 3.7.0
 2. Install the requirements
-3. Run the server using 
-        
-        python manage.py run
-4. Execute the tests using
+3. Execute the tests using
 
         python manage.py test
+4. Run the server using 
+        
+        python manage.py run
+5. Access the Swagger UI here:
 
+        http://localhost:5000/api/v1.0/ui
