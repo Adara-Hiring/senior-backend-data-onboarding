@@ -28,3 +28,11 @@ This test is meant to evaluate 4 skills:
 5. Access the Swagger UI here:
 
         http://localhost:5000/api/v1.0/ui
+        
+## Process
+Using the GitFlow model: Create features against the develop branch and create pull request for each new feature.
+
+Each feature should: 
+1. Include tests under /app/tests
+2. Include descriptive docstrings with arguments and return variables (see Google's Sphinx Format)
+3. Include API documentation in the Swagger yml 
