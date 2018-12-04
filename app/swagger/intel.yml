@@ -34,4 +34,32 @@ paths:
               cookie_id:
                 type: integer
               score:
+                type: number  
+  /scoreEmail/{dp_id}:
+    get:
+      operationId: api.scoreEmail.get.get_Score_Email_by_dp_id
+      tags:
+        - Email,score,Intelligence
+      summary: Get a score,email by dp_id
+      description: Get a score,email for a cookie by dp_id, return empty list if there is no 
+      parameters:
+        - name: dp_id
+          in: path
+          type: integer
+          description: the dataprovider_id
+          required: True
+      responses:
+        200:
+          description: Successfully returned list of intel scores
+          schema:
+            type: object
+            properties:
+              cookie_id:
+                type: integer
+              score:
                 type: number
+              email:
+                type: string  
+  
+
+          
